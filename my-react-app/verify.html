@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Verify Data</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Logout</a></li>
+      <li><a href="#">Total Rewards</a></li>
+      <li><a href="#" class="notification-button">Notifications</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="submitdata.html" data-page="submit">Submit Data</a></li>
+        <li class="active"><a href="verify.html" data-page="verify">Verify Data</a></li>
+        <li><a href="leadeboard.html" data-page="leaderboard">Leaderboard</a></li>
+        <li><a href="impact.html" data-page="impact">Impact of Data submitted</a></li>
+      </ul>
+    </div>
+    <main class="content">
+      <h1>Verify Data</h1>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search by School Name">
+        <button id="search-button">Search</button>
+      </div>
+      <table class="verify-table">
+        <thead>
+          <tr>
+            <th>School Name</th>
+            <th>Country</th>
+            <th>Geolocation</th>
+            <th>Internet Status</th>
+            <th>Verify</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>School A</td>
+            <td>Country X</td>
+            <td>Location A</td>
+            <td>Yes</td>
+            <td><button class="verify-button">Verify</button></td>
+          </tr>
+          <tr>
+            <td>School B</td>
+            <td>Country Y</td>
+            <td>Location B</td>
+            <td>No</td>
+            <td><button class="verify-button">Verify</button></td>
+          </tr>
+          <!-- ... (other school rows) ... -->
+        </tbody>
+      </table>
+  
+
+    </main>
+  </div>
+  
+  <!-- Verification Form Modal -->
+  <div class="modal" id="verify-modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-modal">&times;</span>
+      <h2>Verify School Data</h2>
+      <form class="verify-form">
+        <!-- Verification Status -->
+        <div class="form-row">
+          <label for="verification-status">Verification Status:</label>
+          <select id="verification-status" name="verification-status">
+            <option value="accurate">Accurate</option>
+            <option value="changes">Propose Changes</option>
+          </select>
+        </div>
+        
+        <!-- Comments -->
+        <div class="form-row">
+          <label for="verification-comments">Comments:</label>
+          <textarea id="verification-comments" name="verification-comments" rows="6"></textarea>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-row">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="script.js" defer></script>
+</body>
+</html>
+

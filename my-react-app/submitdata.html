@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Submit Data</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Logout</a></li>
+      <li><a href="#">Total Rewards</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="submitdata.html" data-page="submit">Submit Data</a></li>
+        <li><a href="verify.html" data-page="verify">Verify Data</a></li>
+        <li><a href="leadeboard.html" data-page="leaderboard">Leaderboard</a></li>
+        <li><a href="impact.html" data-page="impact">Impact of Data submitted</a></li>
+      </ul>
+    </div>
+    <main class="content">
+      <form class="submit-form">
+        <div class="form-row">
+          <label for="school-name">School Name:</label>
+          <input type="text" id="school-name" name="school-name" required>
+        </div>
+        
+        <div class="form-row">
+          <label for="geolocation">Geolocation:</label>
+          <input type="text" id="geolocation" name="geolocation" required>
+          <button type="button" id="pick-location">Pick Location from Google Maps</button>
+        </div>
+        
+        <div class="form-row">
+          <label for="internet-connectivity">Internet Connectivity:</label>
+          <select id="internet-connectivity" name="internet-connectivity" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        
+        <div id="internet-speed-section" class="form-row" style="display: none;">
+          <label for="internet-speed">Internet Speed (Mbps):</label>
+          <input type="number" id="internet-speed" name="internet-speed">
+        </div>
+
+        <div class="form-row">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
+
+
